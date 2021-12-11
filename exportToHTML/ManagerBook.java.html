@@ -1,0 +1,160 @@
+<html>
+<head>
+<title>ManagerBook.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #f9f6ef;}
+.s1 { color: #ee7762;}
+.s2 { color: #ffc83c;}
+.s3 { color: #fd971f;}
+.s4 { color: #57d1eb;}
+.s5 { color: #92d923;}
+.s6 { color: #a97cf8;}
+.s7 { color: #ffd866;}
+.s8 { color: #78dce8;}
+</style>
+</head>
+<body bgcolor="#1b1a19">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+ManagerBook.java</font>
+</center></td></tr></table>
+<pre>
+<span class="s1">import </span><span class="s0">java</span><span class="s2">.</span><span class="s0">time</span><span class="s2">.</span><span class="s0">LocalDate;</span>
+<span class="s1">import </span><span class="s0">java</span><span class="s2">.</span><span class="s0">util</span><span class="s2">.</span><span class="s0">Scanner;</span>
+
+
+<span class="s1">public class </span><span class="s0">ManagerBook </span><span class="s3">{</span>
+
+    <span class="s1">public static void </span><span class="s0">displayListBook</span><span class="s4">(</span><span class="s0">Book</span><span class="s5">[] </span><span class="s0">booksList</span><span class="s4">) </span><span class="s3">{</span>
+        <span class="s1">for </span><span class="s4">(</span><span class="s0">Book b </span><span class="s6">: </span><span class="s0">booksList</span><span class="s4">) </span><span class="s3">{</span>
+            <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s4">(</span><span class="s0">b</span><span class="s4">)</span><span class="s0">;</span>
+
+        <span class="s3">}</span>
+    <span class="s3">}</span>
+
+    <span class="s1">public static </span><span class="s0">ScienceBook createScienceBook</span><span class="s4">(</span><span class="s0">Scanner scanner</span><span class="s4">) </span><span class="s3">{</span>
+        <span class="s0">scanner</span><span class="s2">.</span><span class="s0">nextLine</span><span class="s4">()</span><span class="s0">;</span>
+        <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s4">(</span><span class="s7">&quot;Nhập tên sách: &quot;</span><span class="s4">)</span><span class="s0">;</span>
+        <span class="s0">String name </span><span class="s6">= </span><span class="s0">scanner</span><span class="s2">.</span><span class="s0">nextLine</span><span class="s4">()</span><span class="s0">;</span>
+        <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s4">(</span><span class="s7">&quot;Nhập thể loại&quot;</span><span class="s4">)</span><span class="s0">;</span>
+        <span class="s0">String type </span><span class="s6">= </span><span class="s0">scanner</span><span class="s2">.</span><span class="s0">nextLine</span><span class="s4">()</span><span class="s0">;</span>
+        <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s4">(</span><span class="s7">&quot;Nhập giá tiền: &quot;</span><span class="s4">)</span><span class="s0">;</span>
+        <span class="s1">double </span><span class="s0">price </span><span class="s6">= </span><span class="s0">scanner</span><span class="s2">.</span><span class="s0">nextDouble</span><span class="s4">()</span><span class="s0">;</span>
+        <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s4">(</span><span class="s7">&quot;Nhập số lượng&quot;</span><span class="s4">)</span><span class="s0">;</span>
+        <span class="s1">int </span><span class="s0">quantity </span><span class="s6">= </span><span class="s0">scanner</span><span class="s2">.</span><span class="s0">nextInt</span><span class="s4">()</span><span class="s0">;</span>
+        <span class="s0">scanner</span><span class="s2">.</span><span class="s0">nextLine</span><span class="s4">()</span><span class="s0">;</span>
+        <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s4">(</span><span class="s7">&quot;Nhập ngày xuất bản YY/MM/DD: &quot;</span><span class="s4">)</span><span class="s0">;</span>
+        <span class="s0">LocalDate date </span><span class="s6">= </span><span class="s0">LocalDate</span><span class="s2">.</span><span class="s0">of</span><span class="s4">(</span><span class="s0">scanner</span><span class="s2">.</span><span class="s0">nextInt</span><span class="s4">()</span><span class="s8">, </span><span class="s0">scanner</span><span class="s2">.</span><span class="s0">nextInt</span><span class="s4">()</span><span class="s8">, </span><span class="s0">scanner</span><span class="s2">.</span><span class="s0">nextInt</span><span class="s4">())</span><span class="s0">;</span>
+        <span class="s0">scanner</span><span class="s2">.</span><span class="s0">nextLine</span><span class="s4">()</span><span class="s0">;</span>
+        <span class="s1">return new </span><span class="s0">ScienceBook</span><span class="s4">(</span><span class="s0">name</span><span class="s8">, </span><span class="s0">price</span><span class="s8">, </span><span class="s0">quantity</span><span class="s8">, </span><span class="s0">date</span><span class="s8">, </span><span class="s0">type</span><span class="s4">)</span><span class="s0">;</span>
+    <span class="s3">}</span>
+
+    <span class="s1">public static </span><span class="s0">Novel createNovel</span><span class="s4">(</span><span class="s0">Scanner scanner</span><span class="s4">) </span><span class="s3">{</span>
+        <span class="s0">scanner</span><span class="s2">.</span><span class="s0">nextLine</span><span class="s4">()</span><span class="s0">;</span>
+        <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s4">(</span><span class="s7">&quot;Nhập tên sách : &quot;</span><span class="s4">)</span><span class="s0">;</span>
+        <span class="s0">String name </span><span class="s6">= </span><span class="s0">scanner</span><span class="s2">.</span><span class="s0">nextLine</span><span class="s4">()</span><span class="s0">;</span>
+        <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s4">(</span><span class="s7">&quot;Nhập giá tiền : &quot;</span><span class="s4">)</span><span class="s0">;</span>
+        <span class="s1">double </span><span class="s0">price </span><span class="s6">= </span><span class="s0">scanner</span><span class="s2">.</span><span class="s0">nextDouble</span><span class="s4">()</span><span class="s0">;</span>
+        <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s4">(</span><span class="s7">&quot;Nhập số lượng : &quot;</span><span class="s4">)</span><span class="s0">;</span>
+        <span class="s1">int </span><span class="s0">quantity </span><span class="s6">= </span><span class="s0">scanner</span><span class="s2">.</span><span class="s0">nextInt</span><span class="s4">()</span><span class="s0">;</span>
+        <span class="s0">scanner</span><span class="s2">.</span><span class="s0">nextLine</span><span class="s4">()</span><span class="s0">;</span>
+        <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s4">(</span><span class="s7">&quot;Nhập ngày xuất bản YY/MM/DD: &quot;</span><span class="s4">)</span><span class="s0">;</span>
+        <span class="s0">LocalDate date </span><span class="s6">= </span><span class="s0">LocalDate</span><span class="s2">.</span><span class="s0">of</span><span class="s4">(</span><span class="s0">scanner</span><span class="s2">.</span><span class="s0">nextInt</span><span class="s4">()</span><span class="s8">, </span><span class="s0">scanner</span><span class="s2">.</span><span class="s0">nextInt</span><span class="s4">()</span><span class="s8">, </span><span class="s0">scanner</span><span class="s2">.</span><span class="s0">nextInt</span><span class="s4">())</span><span class="s0">;</span>
+        <span class="s0">scanner</span><span class="s2">.</span><span class="s0">nextLine</span><span class="s4">()</span><span class="s0">;</span>
+        <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s4">(</span><span class="s7">&quot;Nhập tác giả : &quot;</span><span class="s4">)</span><span class="s0">;</span>
+        <span class="s0">String author </span><span class="s6">= </span><span class="s0">scanner</span><span class="s2">.</span><span class="s0">nextLine</span><span class="s4">()</span><span class="s0">;</span>
+        <span class="s1">return new </span><span class="s0">Novel</span><span class="s4">(</span><span class="s0">name</span><span class="s8">, </span><span class="s0">price</span><span class="s8">, </span><span class="s0">quantity</span><span class="s8">, </span><span class="s0">date</span><span class="s8">, </span><span class="s0">author</span><span class="s4">)</span><span class="s0">;</span>
+    <span class="s3">}</span>
+
+    <span class="s1">public static double </span><span class="s0">totalPriceBook</span><span class="s4">(</span><span class="s0">Book</span><span class="s5">[] </span><span class="s0">lists</span><span class="s4">) </span><span class="s3">{</span>
+        <span class="s1">double </span><span class="s0">totalPrice </span><span class="s6">= </span><span class="s4">0</span><span class="s0">;</span>
+        <span class="s1">for </span><span class="s4">(</span><span class="s0">Book book </span><span class="s6">: </span><span class="s0">lists</span><span class="s4">) </span><span class="s3">{</span>
+            <span class="s0">totalPrice </span><span class="s6">+= </span><span class="s0">book</span><span class="s2">.</span><span class="s0">getPrice</span><span class="s4">() </span><span class="s6">* </span><span class="s0">book</span><span class="s2">.</span><span class="s0">getQuantity</span><span class="s4">()</span><span class="s0">;</span>
+        <span class="s3">}</span>
+        <span class="s1">return </span><span class="s0">totalPrice;</span>
+    <span class="s3">}</span>
+
+    <span class="s1">public static void </span><span class="s0">findMaxPrice</span><span class="s4">(</span><span class="s0">Book</span><span class="s5">[] </span><span class="s0">lists</span><span class="s4">) </span><span class="s3">{</span>
+        <span class="s1">double </span><span class="s0">findMax </span><span class="s6">= </span><span class="s0">lists</span><span class="s5">[</span><span class="s4">0</span><span class="s5">]</span><span class="s2">.</span><span class="s0">getPrice</span><span class="s4">()</span><span class="s0">;</span>
+        <span class="s1">int </span><span class="s0">index </span><span class="s6">= </span><span class="s4">0</span><span class="s0">;</span>
+        <span class="s1">for </span><span class="s4">(</span><span class="s1">int </span><span class="s0">i </span><span class="s6">= </span><span class="s4">0</span><span class="s0">; i </span><span class="s6">&lt; </span><span class="s0">lists</span><span class="s2">.</span><span class="s0">length; i</span><span class="s6">++</span><span class="s4">) </span><span class="s3">{</span>
+            <span class="s1">if </span><span class="s4">(</span><span class="s0">lists</span><span class="s5">[</span><span class="s0">i</span><span class="s5">]</span><span class="s2">.</span><span class="s0">getPrice</span><span class="s4">() </span><span class="s6">&gt; </span><span class="s0">findMax</span><span class="s4">) </span><span class="s3">{</span>
+                <span class="s0">findMax </span><span class="s6">= </span><span class="s0">lists</span><span class="s5">[</span><span class="s0">i</span><span class="s5">]</span><span class="s2">.</span><span class="s0">getPrice</span><span class="s4">()</span><span class="s0">;</span>
+                <span class="s0">index </span><span class="s6">= </span><span class="s0">i;</span>
+            <span class="s3">}</span>
+        <span class="s3">}</span>
+        <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s4">(</span><span class="s0">lists</span><span class="s5">[</span><span class="s0">index</span><span class="s5">]</span><span class="s4">)</span><span class="s0">;</span>
+    <span class="s3">}</span>
+
+
+    <span class="s1">public static void </span><span class="s0">findLowestPrice</span><span class="s4">(</span><span class="s0">Book</span><span class="s5">[] </span><span class="s0">lists</span><span class="s4">) </span><span class="s3">{</span>
+        <span class="s1">double </span><span class="s0">minPrice </span><span class="s6">= </span><span class="s0">lists</span><span class="s5">[</span><span class="s4">0</span><span class="s5">]</span><span class="s2">.</span><span class="s0">getPrice</span><span class="s4">()</span><span class="s0">;</span>
+        <span class="s1">int </span><span class="s0">index </span><span class="s6">= </span><span class="s4">0</span><span class="s0">;</span>
+        <span class="s1">for </span><span class="s4">(</span><span class="s1">int </span><span class="s0">i </span><span class="s6">= </span><span class="s4">0</span><span class="s0">; i </span><span class="s6">&lt; </span><span class="s0">lists</span><span class="s2">.</span><span class="s0">length; i</span><span class="s6">++</span><span class="s4">) </span><span class="s3">{</span>
+            <span class="s1">if </span><span class="s4">(</span><span class="s0">lists</span><span class="s5">[</span><span class="s0">i</span><span class="s5">]</span><span class="s2">.</span><span class="s0">getPrice</span><span class="s4">() </span><span class="s6">&lt; </span><span class="s0">minPrice</span><span class="s4">) </span><span class="s3">{</span>
+                <span class="s0">minPrice </span><span class="s6">= </span><span class="s0">lists</span><span class="s5">[</span><span class="s0">i</span><span class="s5">]</span><span class="s2">.</span><span class="s0">getPrice</span><span class="s4">()</span><span class="s0">;</span>
+                <span class="s0">index </span><span class="s6">= </span><span class="s0">i;</span>
+            <span class="s3">}</span>
+        <span class="s3">}</span>
+        <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s4">(</span><span class="s0">lists</span><span class="s5">[</span><span class="s0">index</span><span class="s5">]</span><span class="s4">)</span><span class="s0">;</span>
+    <span class="s3">}</span>
+
+    <span class="s1">public static void </span><span class="s0">createListBook</span><span class="s4">(</span><span class="s0">Scanner scanner</span><span class="s8">, </span><span class="s0">Book</span><span class="s5">[] </span><span class="s0">lists</span><span class="s4">) </span><span class="s3">{</span>
+        <span class="s1">for </span><span class="s4">(</span><span class="s1">int </span><span class="s0">i </span><span class="s6">= </span><span class="s4">0</span><span class="s0">; i </span><span class="s6">&lt; </span><span class="s0">lists</span><span class="s2">.</span><span class="s0">length; i</span><span class="s6">++</span><span class="s4">) </span><span class="s3">{</span>
+            <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s4">(</span><span class="s7">&quot;Nhập vào thể loại thứ &quot; </span><span class="s6">+ </span><span class="s4">(</span><span class="s0">i </span><span class="s6">+ </span><span class="s4">1))</span><span class="s0">;</span>
+            <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s4">(</span><span class="s7">&quot;1. Sách khoa học&quot;</span><span class="s4">)</span><span class="s0">;</span>
+            <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s4">(</span><span class="s7">&quot;2. Sách tiểu thuyết&quot;</span><span class="s4">)</span><span class="s0">;</span>
+
+            <span class="s1">int </span><span class="s0">type </span><span class="s6">= </span><span class="s0">scanner</span><span class="s2">.</span><span class="s0">nextInt</span><span class="s4">()</span><span class="s0">;</span>
+            <span class="s1">if </span><span class="s4">(</span><span class="s0">type </span><span class="s6">== </span><span class="s4">1) </span><span class="s3">{</span>
+                <span class="s0">lists</span><span class="s5">[</span><span class="s0">i</span><span class="s5">] </span><span class="s6">= </span><span class="s0">createScienceBook</span><span class="s4">(</span><span class="s0">scanner</span><span class="s4">)</span><span class="s0">;</span>
+            <span class="s3">}</span><span class="s1">else if </span><span class="s4">(</span><span class="s0">type </span><span class="s6">== </span><span class="s4">2)</span><span class="s3">{</span>
+                <span class="s0">lists</span><span class="s5">[</span><span class="s0">i</span><span class="s5">] </span><span class="s6">= </span><span class="s0">createNovel</span><span class="s4">(</span><span class="s0">scanner</span><span class="s4">)</span><span class="s0">;</span>
+            <span class="s3">}</span><span class="s1">else </span><span class="s3">{</span>
+                <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s4">(</span><span class="s7">&quot;Không có thể loại này!!&quot;</span><span class="s4">)</span><span class="s0">;</span>
+            <span class="s3">}</span>
+        <span class="s3">}</span>
+    <span class="s3">}</span>
+    <span class="s1">public static void </span><span class="s0">findBook</span><span class="s4">(</span><span class="s0">Scanner scanner</span><span class="s8">,</span><span class="s0">Book</span><span class="s5">[] </span><span class="s0">lists</span><span class="s4">) </span><span class="s3">{</span>
+        <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s4">(</span><span class="s7">&quot;Nhập thể loại muốn tìm: &quot;</span><span class="s4">)</span><span class="s0">;</span>
+        <span class="s0">String type </span><span class="s6">= </span><span class="s0">scanner</span><span class="s2">.</span><span class="s0">nextLine</span><span class="s4">()</span><span class="s0">;</span>
+        <span class="s1">for </span><span class="s4">(</span><span class="s1">int </span><span class="s0">i </span><span class="s6">= </span><span class="s4">0</span><span class="s0">; i </span><span class="s6">&lt; </span><span class="s0">lists</span><span class="s2">.</span><span class="s0">length; i</span><span class="s6">++</span><span class="s4">) </span><span class="s3">{</span>
+            <span class="s1">if </span><span class="s4">(</span><span class="s0">lists</span><span class="s5">[</span><span class="s0">i</span><span class="s5">] </span><span class="s1">instanceof </span><span class="s0">ScienceBook </span><span class="s4">) </span><span class="s3">{</span>
+                <span class="s1">if</span><span class="s4">((((</span><span class="s0">ScienceBook</span><span class="s4">) </span><span class="s0">lists</span><span class="s5">[</span><span class="s0">i</span><span class="s5">]</span><span class="s4">)</span><span class="s2">.</span><span class="s0">getType</span><span class="s4">()</span><span class="s2">.</span><span class="s0">equals</span><span class="s4">(</span><span class="s0">type</span><span class="s4">))) </span><span class="s3">{</span>
+                    <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s4">(</span><span class="s0">lists</span><span class="s5">[</span><span class="s0">i</span><span class="s5">]</span><span class="s4">)</span><span class="s0">;</span>
+                <span class="s3">}</span>
+            <span class="s3">}</span>
+        <span class="s3">}</span>
+
+    <span class="s3">}</span>
+
+    <span class="s1">public static void </span><span class="s0">findAuthorBook</span><span class="s4">(</span><span class="s0">Scanner scanner</span><span class="s8">, </span><span class="s0">Book</span><span class="s5">[] </span><span class="s0">lists</span><span class="s4">) </span><span class="s3">{</span>
+        <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s4">(</span><span class="s7">&quot;Nhập tác giả muốn tìm: &quot;</span><span class="s4">)</span><span class="s0">;</span>
+        <span class="s0">String author </span><span class="s6">= </span><span class="s0">scanner</span><span class="s2">.</span><span class="s0">nextLine</span><span class="s4">()</span><span class="s0">;</span>
+        <span class="s1">for </span><span class="s4">(</span><span class="s1">int </span><span class="s0">i </span><span class="s6">= </span><span class="s4">0</span><span class="s0">; i </span><span class="s6">&lt; </span><span class="s0">lists</span><span class="s2">.</span><span class="s0">length ; i</span><span class="s6">++</span><span class="s4">) </span><span class="s3">{</span>
+            <span class="s1">if </span><span class="s4">(</span><span class="s0">lists</span><span class="s5">[</span><span class="s0">i</span><span class="s5">] </span><span class="s1">instanceof </span><span class="s0">Novel</span><span class="s4">) </span><span class="s3">{</span>
+                <span class="s1">if </span><span class="s4">((((</span><span class="s0">Novel</span><span class="s4">) </span><span class="s0">lists</span><span class="s5">[</span><span class="s0">i</span><span class="s5">]</span><span class="s4">)</span><span class="s2">.</span><span class="s0">getAuthor</span><span class="s4">()</span><span class="s2">.</span><span class="s0">equals</span><span class="s4">(</span><span class="s0">author</span><span class="s4">))) </span><span class="s3">{</span>
+                    <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s4">(</span><span class="s0">lists</span><span class="s5">[</span><span class="s0">i</span><span class="s5">]</span><span class="s4">)</span><span class="s0">;</span>
+                <span class="s3">}</span>
+             <span class="s3">}</span>
+        <span class="s3">}</span>
+    <span class="s3">}</span>
+
+    <span class="s1">public static double </span><span class="s0">averageUnitPrice </span><span class="s4">(</span><span class="s0">Book</span><span class="s5">[] </span><span class="s0">lists</span><span class="s4">) </span><span class="s3">{</span>
+        <span class="s1">double </span><span class="s0">sumScience </span><span class="s6">= </span><span class="s4">0</span><span class="s0">;</span>
+        <span class="s1">double </span><span class="s0">count </span><span class="s6">= </span><span class="s4">0</span><span class="s0">;</span>
+
+        <span class="s1">for </span><span class="s4">(</span><span class="s1">int </span><span class="s0">i </span><span class="s6">= </span><span class="s4">0</span><span class="s0">; i </span><span class="s6">&lt; </span><span class="s0">lists</span><span class="s2">.</span><span class="s0">length ; i</span><span class="s6">++</span><span class="s4">) </span><span class="s3">{</span>
+            <span class="s1">if </span><span class="s4">(</span><span class="s0">lists</span><span class="s5">[</span><span class="s0">i</span><span class="s5">] </span><span class="s1">instanceof </span><span class="s0">ScienceBook</span><span class="s4">) </span><span class="s3">{</span>
+                <span class="s0">sumScience </span><span class="s6">+= </span><span class="s0">lists</span><span class="s5">[</span><span class="s0">i</span><span class="s5">]</span><span class="s2">.</span><span class="s0">getPrice</span><span class="s4">()</span><span class="s0">;</span>
+                <span class="s0">count</span><span class="s6">++</span><span class="s0">;</span>
+            <span class="s3">}</span>
+        <span class="s3">}</span>
+        <span class="s1">return </span><span class="s4">(</span><span class="s0">sumScience</span><span class="s6">/</span><span class="s0">count</span><span class="s4">)</span><span class="s0">;</span>
+    <span class="s3">}</span>
+    
+<span class="s3">}</span></pre>
+</body>
+</html>
